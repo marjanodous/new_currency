@@ -9,16 +9,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 
 public class splash extends AppCompatActivity {
 
+
+
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-
-
+    protected void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
         setContentView(R.layout.activity_splash);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -26,6 +28,8 @@ public class splash extends AppCompatActivity {
                 startActivity(i);
                 finish();
             }
-        },3000);
+        },2000);
+
     }
+
 }

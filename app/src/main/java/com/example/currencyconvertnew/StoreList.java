@@ -1,10 +1,10 @@
 package com.example.currencyconvertnew;
-
-
+/*support telgram id =@javaprogrammer_eh
+ * 04/02/1398
+ * creted by elmira hossein zadeh*/
 public class StoreList {
     private String id;
     private String name;
-
 
     public StoreList(String id, String name) {
         this.id = id;

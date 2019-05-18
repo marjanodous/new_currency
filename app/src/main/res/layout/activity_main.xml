@@ -6,34 +6,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/shape_imgconvert"
+    <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:background="@drawable/shape_imgconvert"-->
+        <!--android:elevation="5dp"-->
+        <!--android:layout_gravity="center|right"-->
+        <!--android:layout_margin="16dp">-->
+        <!--<ImageView-->
+            <!--android:layout_width="50dp"-->
+            <!--android:layout_height="50dp"-->
+            <!--android:background="@drawable/ic_convert" />-->
+    <!--</RelativeLayout>-->
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:text="تبدیلش کن !"
+        android:id="@+id/btn_convert"
+        android:textStyle="bold"
         android:elevation="5dp"
-        android:layout_gravity="center|right"
-        android:layout_margin="16dp">
-        <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@drawable/ic_convert" />
-    </RelativeLayout>
-
-
-
-
-
+        android:layout_gravity="center"
+        android:textColor="@color/color_white"
+        android:background="@drawable/shape_btnok"/>
+    //body
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        //section top
         <RelativeLayout
             android:id="@+id/rel_top"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/shape_background1">
+            //text title
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -44,56 +52,85 @@
                 android:textSize="35sp"
                 android:id="@+id/txt1"
                 android:layout_centerHorizontal="true"/>
-
-
-            <EditText
-                android:id="@+id/edt_price"
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:layout_centerInParent="true"
-                android:hint="مبلغ به ریال ..."
-                android:background="@drawable/shape_txt2"
-                android:textColorHint="@color/color_white"
-                android:inputType="number"
-                android:textAlignment="center"
-                android:textSize="25dp"
-                android:layout_margin="40dp"/>
+            //Linear center
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="100dp"
                 android:orientation="horizontal"
                 android:id="@+id/lnr_convert"
-                android:layout_below="@+id/edt_price"
+                android:layout_centerInParent="true"
                 android:layout_marginLeft="40dp"
-                android:layout_marginRight="40dp">
+                android:layout_marginRight="40dp"
+                android:layoutDirection="ltr">
 
-                <Spinner
-                    android:id="@+id/spin_secound"
+                //linear edt_text
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="1"
+                    android:layout_gravity="bottom"
+                    android:gravity="bottom">
+                    <EditText
+                        android:id="@+id/edt_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="0"
+                        android:textColorHint="@color/color_white"
+                        android:inputType="number"
+                        android:gravity="bottom"
+                        android:textSize="50dp"
+                        android:layout_weight="1"
+                        android:padding="16dp"
+                        android:textColor="@color/color_white"
+                        android:background="@drawable/shape_txt3"/>
+                </LinearLayout>
+
+                //linear spinner
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="6dp"
                     android:layout_weight="2"
-                    android:background="@drawable/shape_txt2" />
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:text="به"
-                    android:textAlignment="center"
-                    android:textColor="#fff"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:id="@+id/txt2"
-                    android:layout_weight="3"/>
+                    android:layout_gravity="top"
+                    android:gravity="top">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_gravity="top"
+                        android:gravity="top"
+                        android:background="@drawable/shape_txt3"
+                        android:orientation="horizontal">
 
-                <Spinner
-                    android:id="@+id/spin_first"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_weight="2"
-                    android:background="@drawable/shape_txt2" />
+                        <Spinner
+                            android:id="@+id/spin_first"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="top"
+                            android:background="@android:color/transparent"
+                            android:gravity="bottom"
+                            android:layout_marginLeft="5dp"
+                            android:verticalScrollbarPosition="left"
+                            android:spinnerMode="dropdown"
+                            android:popupBackground="@color/back_spin"/>
 
+                        <ImageView
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center"
+                             android:background="@drawable/triangle1"/>
+
+                    </RelativeLayout>
+                </LinearLayout>
             </LinearLayout>
+
         </RelativeLayout>
 
+        //section bottom
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -103,32 +140,19 @@
 
             <Button
                 android:layout_width="match_parent"
-                android:layout_height="50dp"
+                android:layout_height="55dp"
                 android:hint="نمایش تبدیل"
                 android:textColorHint="@color/color"
-                android:textSize="25dp"
+                android:textSize="27dp"
                 android:textColor="@color/color"
-                android:layout_margin="40dp"
+                android:layout_margin="44dp"
                 android:background="@drawable/shape_txt"
                 android:id="@+id/btn_return"
                 android:layout_centerInParent="true"/>
-
-            <Button
-                android:layout_width="150dp"
-                android:layout_height="50dp"
-                android:layout_centerHorizontal="true"
-                android:text="تبدیلش کن !"
-                android:id="@+id/btn_convert"
-                android:textStyle="bold"
-                android:textColor="@color/color_white"
-                android:layout_above="@+id/btn_return"
-                android:layout_margin="16dp"
-                android:background="@drawable/shape_btnok"/>
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="گروه نرم افزاری آلفا"
+                android:text="مجموعه نرم افزاری آلفا"
                 android:layout_centerHorizontal="true"
                 android:layout_alignParentBottom="true"
                 android:textColor="#D3144A"
@@ -136,8 +160,4 @@
                 android:layout_margin="16dp"/>
         </RelativeLayout>
     </LinearLayout>
-
-
-
-
 </FrameLayout>

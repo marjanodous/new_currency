@@ -6,18 +6,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".splash"
-    android:background="@drawable/splash3">
+    android:background="@drawable/shape_background">
+
+
+    <ImageButton
+        android:layout_width="350dp"
+        android:layout_height="140dp"
+        android:id="@+id/logo_convert"
+        android:layout_centerInParent="true"
+        android:background="@drawable/alphaa"
+        android:rotation="340"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="نسخه 2.0.1"
+        android:text="نسخه2.0.2"
         android:layout_margin="16dp"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:textColor="@color/color_white" />
+        android:textColor="@color/color" />
 
 </RelativeLayout>

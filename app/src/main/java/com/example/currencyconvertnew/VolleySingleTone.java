@@ -1,4 +1,7 @@
 package com.example.currencyconvertnew;
+/*support telgram id =@javaprogrammer_eh
+ * 04/02/1398
+ * creted by elmira hossein zadeh*/
 
 import android.content.Context;
 
